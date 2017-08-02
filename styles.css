@@ -1,0 +1,174 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #F2F4F3;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+  vertical-align:top
+}
+.header {
+  height: 150px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #1974A1;
+}
+
+.header > .headercontent {
+  display: flex;
+  flex: 0 1 60%;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
+}
+
+.logo {
+  display: flex;
+  color: #F2F4F3;
+  padding: 0;
+  margin: 0;
+}
+.title {
+  color: #F2F4F3;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14pt;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-self: center;
+  width: 60%;
+  background-color: #5999BC;
+}
+
+.main-navigation {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+
+}
+.anchor {
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+  border: 1px solid black; /* debug */
+}
+
+nav a {
+    width: 100%;
+    text-decoration: none;
+    color: #777;
+    font-family: sans-serif;
+    display: flex;
+}
+nav li {
+        border: 1px solid black; /* debug */
+    display: flex;
+    flex: 1 1 100%;
+}
+
+nav a:hover {
+    color: #000;
+    background-color: #7FB1CA;
+}
+
+ul.drop-menu li {
+    display: none; /* none */
+    list-style: none;
+}
+li:hover > ul.drop-menu li {
+    display: flex;
+  }
+
+li > ul.drop-menu {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    top: 100%;
+    width: 100%;
+    background: #ccc;
+}
+
+
+.maincontent {
+  display: flex;
+  justify-content: center;
+  flex: 1 0 auto;
+  height: 400px;
+
+}
+
+.content {
+  background-color: #7FB1CA;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  flex: 0 1 60%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.post {
+  display: flex;
+  width: 80%;
+  flex-flow: column;
+}
+
+.post > p {
+}
+
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  justify-content: center;
+  background-color: #1974A1;
+}
+
+.footercontent {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 60%;
+}
+
+
+.footercontent > i, a {
+    padding: 10px;
+    color: #7FB1CA;
+}
