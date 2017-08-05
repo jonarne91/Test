@@ -9,23 +9,23 @@
 
 function newUl(event){
   $(event.target).append(
-    $('<ul>').attr('class','doubledrop removeme')
+    $('<ul>').attr('class','doubledrop','id','removeme')
       .append(
           $('<li>').attr('class','addNew').append($('<a>').attr('href','home').text('1')).attr('class','anchor')))
 };
 
 $(document).ready(function(){
-  $(".addNew").hover(newUl);
-  }, function(){
-    $('.removeme').remove();
- });
+  $(".addNew").mousein(newUl);
+  $(".addNew").mouseout(function(){
+    $("#removeme").remove(); });
+
+
 
 
 
 </script>
 
 </head>
-
 
 <body>
 
