@@ -7,25 +7,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 
+function newUl(event){
+  $(event.target).append(
+    $('<ul>').attr('class','doubledrop removeme')
+      .append(
+          $('<li>').attr('class','addNew').append($('<a>').attr('href','home').text('1')).attr('class','anchor')))
+};
+
 $(document).ready(function(){
-    $("#addNew").hover(function(){
-        $("#addNew").append(
-            $('<ul>').append(
-                $('<li>').append(
-                  $('<a>').attr('href','#home',).text('1')
-                    )).append(
-                    $('<li>').append(
-                      $('<a>').attr('href','#home',).text('2')
-                      )).append(
-                        $('<li>').append(
-                          $('<a>').attr('href','#home',).text('3')
-                            )).addClass('doubledrop').addClass('removeme'));
-        $("#addNew").addClass('anchor');
-    }  );
-    $(".doubledrop").mouseleave(function(){
-        $(".removeme").remove();
-    });
-});
+  $(".addNew").hover(newUl);
+  }, function(){
+    $('.removeme').remove();
+ });
 
 
 
@@ -60,8 +53,8 @@ $(document).ready(function(){
 
                   <li class='anchor'><a href="#"><i class="fa fa-angle-right" ></i>Elektro</a>
                       <ul class='doubledrop'>
-                        <li id="addNew"><a href="#"><i class="fa fa-angle-right" ></i>Kabel</a></li>
-                        <li id="addNew"><a href="#"><i class="fa fa-angle-right" ></i>Penisforlenger</a></li>
+                        <li class="addNew"><a href="#"><i class="fa fa-angle-right" ></i>Kabel</a></li>
+                        <li class="addNew"><a href="#"><i class="fa fa-angle-right" ></i>Penisforlenger</a></li>
                       </ul>
                   </li>
 

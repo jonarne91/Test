@@ -180,6 +180,7 @@ li > ul.drop-menu > li > ul.doubledrop > li > ul.doubledrop { /* TRIPLEDROP JAVA
 li > ul.drop-menu > li > ul.doubledrop > li > ul.doubledrop > li { /* TRIPLEDROP JAVA WHAT? */
   display: flex;
   flex: 1 1 100%;
+  flex-flow: column wrap;
   background-color: red;
 
 }
